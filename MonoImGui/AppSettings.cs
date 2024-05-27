@@ -5,7 +5,7 @@ namespace MonoImGui
 {
     public static class AppSettings
     {
-        public static readonly string GitHubRepoURL = "";
+        public static readonly string GitHubRepoURL = "https://github.com/BlizzCrafter/MonoImGui";
 
         public static readonly string LocalContentPath = Path.Combine(AppContext.BaseDirectory, "Content");
         public static readonly string LogsPath = Path.Combine(AppContext.BaseDirectory, "logs");
