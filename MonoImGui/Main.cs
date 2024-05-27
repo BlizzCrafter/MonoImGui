@@ -78,7 +78,8 @@ namespace MonoImGui
                 | ImGuiWindowFlags.NoBackground;
 
             var windowFlags = ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoDecoration
-                | ImGuiWindowFlags.NoSavedSettings | ImGuiWindowFlags.MenuBar;
+                | ImGuiWindowFlags.NoSavedSettings | ImGuiWindowFlags.MenuBar 
+                /*| ImGuiWindowFlags.AlwaysVerticalScrollbar*/;
 
             ImGuiViewportPtr viewport = ImGui.GetMainViewport();
 
