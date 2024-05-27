@@ -23,8 +23,8 @@ namespace MonoImGui
         public Main()
         {
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferWidth = 800;
-            _graphics.PreferredBackBufferHeight = 500;
+            _graphics.PreferredBackBufferWidth = 600;
+            _graphics.PreferredBackBufferHeight = 350;
 
             // Currently not usable in DesktopGL because of this bug:
             // https://github.com/MonoGame/MonoGame/issues/7914
