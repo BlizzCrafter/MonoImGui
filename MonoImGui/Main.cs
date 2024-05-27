@@ -118,6 +118,21 @@ namespace MonoImGui
                             ImGui.SetScrollHereY(1.0f);
                         }
                     }
+                    else
+                    {
+                        ImGui.Indent();
+                        ImGui.TextWrapped(@$"Welcome {FontAwesome.HandPeace}
+
+This template project makes it easier to start a new MonoGame tool with ImGui.NET and Serilog integrations.
+
+It contains some very basic stuff, so you need to update everything to your needs.
+
+Also please don't forget to update the text in the 'About' menu to your own info or alternatively remove it.
+
+Have a nice day {FontAwesome.Smile}
+
+:: BlizzCrafter {FontAwesome.Heart}");
+                    }
                     ImGui.End();
                 }
                 ImGui.End();
