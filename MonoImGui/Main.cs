@@ -283,7 +283,7 @@ Have a nice day {FontAwesome.Smile}
 
                 ImGui.SameLine(ImGui.GetContentRegionMax().X - (buttonWidth * buttonCountRightAligned) - ImGui.GetStyle().ItemSpacing.X * buttonCountRightAligned);
 
-                // if (HasError) ImGui.BeginDisabled();
+                //if (HasError) ImGui.BeginDisabled();
                 if (ImGui.Button("OK", new Num.Vector2(buttonWidth, 0)) || (ImGui.IsKeyPressed(ImGuiKey.Enter) /*&& !HasError*/))
                 {
                     if (ModalDescriptor.MessageType == MessageType.AddContent)
