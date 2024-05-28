@@ -38,7 +38,7 @@ namespace MonoImGui
 
         protected override void Initialize()
         {
-            Window.Title = "MonoImGui Tool";
+            Window.Title = AppSettings.Title;
 
             _graphics.GraphicsDevice.PresentationParameters.BackBufferWidth = _graphics.PreferredBackBufferWidth;
             _graphics.GraphicsDevice.PresentationParameters.BackBufferHeight = _graphics.PreferredBackBufferHeight;
@@ -122,15 +122,15 @@ namespace MonoImGui
                     else
                     {
                         ImGui.Indent();
-                        ImGui.TextWrapped(@$"Welcome {FontAwesome.HandPeace}
+                        ImGui.TextWrapped(@$"Heyho {FontAwesome.HandPeace}{FontAwesome.SmileWink}
 
-This template project makes it easier to start a new MonoGame tool with ImGui.NET and Serilog integrations.
+{AppSettings.Description}
 
 It contains some very basic stuff, so you need to update everything to your needs.
 
-Also please don't forget to update the text in the 'About' menu to your own info or alternatively remove it.
+Also please don't forget to update the 'AppSettings.cs' class with your own info or alternatively remove it.
 
-Have a nice day {FontAwesome.Smile}
+Have a nice day!
 
 :: BlizzCrafter {FontAwesome.Heart}");
                     }
@@ -250,7 +250,7 @@ Have a nice day {FontAwesome.Smile}
                     ImGui.PushStyleColor(ImGuiCol.Button, ImGui.GetStyle().Colors[(int)ImGuiCol.PlotHistogram]);
                     ImGui.PushStyleColor(ImGuiCol.ButtonHovered, ImGui.GetStyle().Colors[(int)ImGuiCol.PlotHistogramHovered]);
                     ImGui.PushStyleColor(ImGuiCol.ButtonActive, ImGui.GetStyle().Colors[(int)ImGuiCol.PlotHistogram]);
-                    if (ImGui.Button($"{FontAwesomeBrands.Github} MonoImGui Tool", new Num.Vector2(ImGui.GetContentRegionAvail().X, 0)))
+                    if (ImGui.Button($"{FontAwesomeBrands.Github} {AppSettings.Title}", new Num.Vector2(ImGui.GetContentRegionAvail().X, 0)))
                     {
                         ProcessStartInfo process = new(AppSettings.GitHubRepoURL)
                         {

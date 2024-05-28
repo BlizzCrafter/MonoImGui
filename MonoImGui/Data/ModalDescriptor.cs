@@ -22,8 +22,8 @@ namespace MonoImGui.Data
         public static void SetAbout()
         {
             var appVersion = $"v.{Assembly.GetExecutingAssembly().GetName().Version.Major}.{Assembly.GetExecutingAssembly().GetName().Version.Minor}.{Assembly.GetExecutingAssembly().GetName().Version.MinorRevision}";
-            string shortMessage = $"MonoImGui Tool {appVersion}\nCopyright {FontAwesome.Copyright} {DateTime.Now.Year} BlizzCrafter\nThe MIT License (MIT)";
-            string longMessage = "This template project makes it easier to start a new MonoGame tool with ImGui.NET and Serilog integrations.\n\nVisit the GitHub page for further help & extended license information.";
+            string shortMessage = $"{AppSettings.Title} {appVersion}\nCopyright {FontAwesome.Copyright} {DateTime.Now.Year} {AppSettings.Author}\n{AppSettings.License}";
+            string longMessage = $"{AppSettings.Description}\n\nVisit the GitHub page for further help & extended license information.";
             Set(MessageType.About, $"{shortMessage}\n\n{longMessage}");
         }
 
