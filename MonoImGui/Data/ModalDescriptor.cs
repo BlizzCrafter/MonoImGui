@@ -21,7 +21,7 @@ namespace MonoImGui.Data
 
         public static void SetAbout()
         {
-            var appVersion = $"v.{Assembly.GetExecutingAssembly().GetName().Version.Major}.{Assembly.GetExecutingAssembly().GetName().Version.Minor}.{Assembly.GetExecutingAssembly().GetName().Version.MinorRevision}";
+            var appVersion = $"v.{Assembly.GetExecutingAssembly().GetName().Version.Major}.{Assembly.GetExecutingAssembly().GetName().Version.Minor}.{Assembly.GetExecutingAssembly().GetName().Version.Build}";
             string shortMessage = $"{AppSettings.Title} {appVersion}\nCopyright {FontAwesome.Copyright} {DateTime.Now.Year} {AppSettings.Author}\n{AppSettings.License}";
             string longMessage = $"{AppSettings.Description}\n\nVisit the GitHub page for further help & extended license information.";
             Set(MessageType.About, $"{shortMessage}\n\n{longMessage}");
